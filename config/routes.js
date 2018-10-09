@@ -19,7 +19,7 @@ module.exports = function(app){
 
 function authenticateUser(req, res, next) {
   if (!req.session.doctor_id) {
-    res.redirect('/doctors/login');
+    res.redirect('/');
   } else {
     next();
   }
