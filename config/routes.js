@@ -1,12 +1,13 @@
 
 const knex = require("../db/knex.js");
 
-const CHANGE = require("../controllers/CHANGE.js");
+const CHANGE = require("../controllers/users.js");
 
 
 module.exports = function(app){
   app.use(createErrorArr);
 
+  app.get('/', users.index);
 
 
   app.use(authenticateUser);
