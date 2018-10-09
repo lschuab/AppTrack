@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Business Profile</title>
+  </head>
+  <body>
+    <h1> Welcome <%=businesses.contact_name%></h1>
+     <button type="submit"><a class="logout" href="/logout">Logout</a></button>
+     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for projects">
+     <button type="submit"><a class="new project" href="/newproject">New Project</a></button>
+
+    <form action="/ROUTEHERE" methon="post">
+      <% for(let i = 0; i < projects.length; i++) { %>
+        <div class="">
+        <h2>Project:</h2>
+        <h3><%=projects.short_description%></h3>
+      <% } %>
+
+<script>
+    function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+  </body>
+</html>

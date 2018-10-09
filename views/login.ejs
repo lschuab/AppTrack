@@ -37,6 +37,14 @@
 <h1> Register</h1>
   <form action="/register" method="post">
     <div class="form-group">
+      <label for="rollselect">Select your role</label>
+    <select class="form-control">
+      <option value="Select your role" selected disabled>Select your role</option>
+  <option value="developer">Developer searching for project</option>
+  <option value="business">Business submiting project proposal</option>
+</select>
+<br>
+    <div class="form-group">
       <label for="fullname">Full Name</label>
       <input type="text" class="form-control" id="registerform" aria-describedby="emailHelp" placeholder="Full Name" name="dev_name">
     </div>
