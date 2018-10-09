@@ -12,8 +12,9 @@ exports.up = function(knex, Promise) {
       .inTable('businesses')
       .onDelete('CASCADE')
       .index();
-    table.boolean('accepted').defaultTo('false');
-    table.integer('dev_id');
+    table.integer('dev_id')
+      .references('id')
+      .inTable('developers');
     table.timestamps(true, true);
   });
 };

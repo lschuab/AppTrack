@@ -5,7 +5,6 @@ exports.up = function(knex, Promise) {
     table.string('dev_name');
     table.string('email');
     table.string('password');
-    table.boolean('project_chosen').defaultTo('false');
     table.integer('project_id');
     table.timestamps(true, true);
   });

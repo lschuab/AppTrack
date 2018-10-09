@@ -8,6 +8,7 @@ module.exports = function(app){
   app.use(createErrorArr);
 
   app.get('/', users.index);
+  app.post('/register', users.register);
 
 
   app.use(authenticateUser);
