@@ -1,7 +1,7 @@
 
 const knex = require("../db/knex.js");
 
-const CHANGE = require("../controllers/users.js");
+const users = require("../controllers/users.js");
 
 
 module.exports = function(app){
