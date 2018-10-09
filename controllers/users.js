@@ -18,7 +18,7 @@ module.exports = {
           password: req.body.password,
         })
       .then(() => res.redirect('/'))
-      .catch(err =>  {
+
         console.log(err);
         if (err.code == 23505) {
           req.session.errors.register.push("User with that email already exists.");
@@ -49,5 +49,9 @@ module.exports = {
       });
     }
   },
+
+  login: (req, res) => {
+  
+  }
 
 };

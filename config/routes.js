@@ -9,7 +9,7 @@ module.exports = function(app){
 
   app.get('/', users.index);
   app.post('/register', users.register);
-  app.get('/login', (req, res)=> res.render('business'));
+  app.post('/login', users.login);
 
 
   app.use(authenticateUser);

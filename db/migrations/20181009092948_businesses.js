@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('company_name');
     table.string('contact_name');
-    table.string('email');
+    table.string('email').unique();
     table.string('password');
     table.string('phone_number');
     table.text('company_url');
