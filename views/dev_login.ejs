@@ -13,14 +13,21 @@
     <!-- Navigation-->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Capstone Knex</a>
+      <a class="navbar-brand" href="/">Capstone Knex</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <button class="btn btn-outline-warning" type="button" id="devloginbutton">Logout</button>
+          <div class="nav-right">
+            <a href="/developers/login">
+              <button class="btn btn-outline-warning" type="button" id="devloginbutton">Developer Login</button>
+            </a>
+            <br>
+            <a href="/businesses/login">
+              <button class="btn btn-outline-warning" type="button" id="busloginbutton">Business Login</button>
+            </a>
+          </div>
         </div>
       </div>
     </nav>

@@ -10,6 +10,7 @@ module.exports = function(app){
   app.use(createErrorArr);
 
   app.get('/', users.index);
+  app.get('/logout', users.logout);
 
   app.get('/developers/login', developers.loginForm);
   app.post('/developers/register', developers.register);
