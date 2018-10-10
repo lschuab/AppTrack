@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Project Info</title>
+  </head>
+<body>
+  <div class="nav">
+    <a href="/index">Home</a>
+    <a href="/logout">Logout</a>
+  </div>
+  <div class="">
+      <div class="">
+     <h2><%= COMPANY NAME EJS %></h2> <!-- COMPANY LOGO?? -->
+     <h3><%= NAME OF PROJECT EJS %></h3>
+   </div>
+ </div>
+   <h2>Project Details:</h2>
+   <% for(let i=0; i<projects.length; i++) { %>
+     <div class = "card">
+       <div class="project-description">
+         <h2><%= projects[i].full_description %></h2>
+         <p><b>Contact Info:</b></p>
+         <p><%= developers.dev_name %></p>
+         <p><%= developers.email %></p>
+       </div>
+       <a class ="button" href="/DEVHOMEPAGE>">Accept</a>
+       <a class ="button" href="/dev_login>">Dropped</a>
+     </div>
+   <% } %>
+
+</body>
+</html>
