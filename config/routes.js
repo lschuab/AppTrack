@@ -4,6 +4,7 @@ const knex = require("../db/knex.js");
 const users = require("../controllers/users.js");
 const developers = require("../controllers/developers.js");
 const businesses = require("../controllers/businesses.js");
+const projects = require("../controllers/projects.js");
 
 
 module.exports = function(app){
@@ -26,6 +27,7 @@ module.exports = function(app){
   app.use(authenticateUser);
 
   app.get('/business', businesses.projects);
+  app.get('/projects/new', projects.create);
   //dummy routes for testing
   app.get('/newproject', (req, res) => res.render('new_project'));
   app.get('/projectinfo', (req, res) => res.render('project_info'));
