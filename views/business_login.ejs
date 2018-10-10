@@ -14,7 +14,7 @@
     <div class="login-container col-6">
 
       <h1> Login </h1>
-        <form action="/login" method="post">
+        <form action="/businesses/login" method="post">
           <div class="form-group">
             <label for="email-login">Email address</label>
             <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp" placeholder="Email Address" name="email" required>
@@ -35,7 +35,7 @@
       <div class="register-container col-6">
 
         <h1> Register</h1>
-          <form id="register" action="/register" method="post">
+          <form id="register" action="/businesses/register" method="post">
             <br>
             <div class="form-group">
               <label for="name-input">Full Name</label>
@@ -68,7 +68,7 @@
             <button type="submit" class="btn btn-primary">Register</button>
           </form>
       </div>
-
+      <br>
       <p id="mismatch" class="warning hidden">Passwords do not match</p>
         <% for (const err of errors.register) { %>
           <p class="warning"><%= err %></p>
