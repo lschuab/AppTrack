@@ -4,6 +4,8 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('short_description');
     table.string('dev_type');
+    table.string('company_name');
+    table.text('company_url');
     table.text('stack_pref');
     table.text('full_description');
     table.integer('business_id')
