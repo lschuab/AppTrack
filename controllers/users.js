@@ -5,4 +5,8 @@ module.exports = {
     res.render('index');
   },
 
+  logout: (req, res) => {
+    req.session.destroy();
+    res.redirect('/');
+  }
 };

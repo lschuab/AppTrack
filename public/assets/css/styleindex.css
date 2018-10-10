@@ -10,7 +10,7 @@
 .navbar-nav {
   display: flex;
   flex-grow: 1;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .nav-right {
