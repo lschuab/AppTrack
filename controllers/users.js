@@ -8,14 +8,7 @@ module.exports = {
 
 
 
-  // (req, res) => {
-  //   res.render('login', {errors: req.session.errors});
-  //       req.session.errors = {
-  //         login: [],
-  //         register: [],
-  //       };
-  //       req.session.save();
-  // }
+
 
   // register: (req, res) => {
   //   if (req.body.role === "developer") {

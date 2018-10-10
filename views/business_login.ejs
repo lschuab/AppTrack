@@ -10,77 +10,69 @@
   </head>
   <body>
 
-    <! Login -->
+    <!-- Login -->
     <div class="login-container col-6">
 
+      <h1> Login </h1>
+        <form action="/login" method="post">
+          <div class="form-group">
+            <label for="email-login">Email address</label>
+            <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp" placeholder="Email Address" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password-login">Password</label>
+            <input type="password" class="form-control" id="password-login" placeholder="Password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
 
-    <h1> Login </h1>
-      <form action="/login" method="post">
-      <div class="form-group">
-        <label for="email-login">Email address</label>
-        <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
       </div>
-      <div class="form-group">
-        <label for="password-login">Password</label>
-        <input type="password" class="form-control" id="password-login" placeholder="Password" name="password" required>
+
+      <br>
+      <hr>
+      <br>
+
+      <div class="register-container col-6">
+
+        <h1> Register</h1>
+          <form id="register" action="/register" method="post">
+            <br>
+            <div class="form-group">
+              <label for="name-input">Full Name</label>
+              <input type="text" class="form-control" id="name-input" placeholder="Full Name" name="contact_name" required>
+            </div>
+            <div class="form-group">
+              <label for="company-name-input">Company Name</label>
+              <input type="text" class="form-control" id="company-name-input" placeholder="Company Name" name="company_name" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-number-input">Contact Number</label>
+              <input type="tel" class="form-control" id="contact-number-input" placeholder="Contact Number" name="phone_number">
+            </div>
+            <div class="form-group">
+              <label for="company-url-input">Company URL</label>
+              <input type="text" class="form-control" id="company-url-input" placeholder="Company URL" name="company_url">
+            </div>
+            <div class="form-group">
+              <label for="email-input">Email Address</label>
+              <input type="email" class="form-control" id="email-input" placeholder="Email Address" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="password-input">Password</label>
+              <input type="password" class="form-control" id="password-input" placeholder="Password" name="password" required>
+            </div>
+            <div class="form-group">
+              <label for="confirm-input">Confirm Password</label>
+              <input type="password" class="form-control" id="confirm-input" aria-describedby="emailHelp" placeholder="Confirm Password" name="confirm" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
       </div>
-      <button type="submit" class="btn btn-primary">Login</button>
-      </form>
 
-</div>
-
-<br>
-<hr>
-<br>
-
-<div class="register-container col-6">
-
-<h1> Register</h1>
-  <form id="register" action="/register" method="post">
-
-
-<br>
-
-    <div class="form-group">
-      <label for="dev-name-input">Full Name</label>
-      <input type="text" class="form-control" id="dev-name-input" placeholder="Full Name" name="dev_name" required>
+      <p id="mismatch" class="warning hidden">Passwords do not match</p>
+        <% for (const err of errors.register) { %>
+          <p class="warning"><%= err %></p>
+        <% } %>
     </div>
-    div class="form-group">
-      <label for="company-name-input">Company Name</label>
-      <input type="text" class="form-control" id="company-name-input" placeholder="Company Name" name="company_name" required>
-    </div>
-    <div class="form-group">
-      <label for="contact-number-input">Contact Number</label>
-      <input type="tel" class="form-control" id="contact-number-input" placeholder="Contact Number" name="phone_number">
-    </div>
-    <div class="form-group">
-      <label for="company-url-input">Company URL</label>
-      <input type="text" class="form-control" id="company-url-input" placeholder="Company URL" name="company_url">
-    </div>
-  <div class="form-group">
-    <label for="email-input">Email address</label>
-    <input type="email" class="form-control" id="email-input" placeholder="Enter email" name="email" required>
-  </div>
-  <div id="business-fields">
-
-  </div>
-  <div class="form-group">
-    <label for="password-input">Password</label>
-    <input type="password" class="form-control" id="password-input" placeholder="Password" name="password" required>
-  </div>
-  <div class="form-group">
-    <label for="confirm-input">Confirm Password</label>
-    <input type="password" class="form-control" id="confirm-input" aria-describedby="emailHelp" placeholder="Confirm Password" name="confirm" required>
-  </div>
-  <button type="submit" class="btn btn-primary">Register</button>
-  </form>
-  </div>
-  <p id="mismatch" class="warning hidden">Passwords do not match</p>
-<% for (const err of errors.register) { %>
-  <p class="warning"><%= err %></p>
-<% } %>
-
-
-</form>
   </body>
 </html>
