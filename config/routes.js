@@ -27,7 +27,11 @@ module.exports = function(app){
   app.use(authenticateUser);
 
   app.get('/business', businesses.projects);
-  app.get('/projects/new', projects.create);
+  app.get('/projects/new', projects.form);
+  app.post('/projects', projects.create);
+
+
+
   //dummy routes for testing
   app.get('/newproject', (req, res) => res.render('new_project'));
   app.get('/projectinfo', (req, res) => res.render('project_info'));
