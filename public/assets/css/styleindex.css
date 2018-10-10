@@ -1,4 +1,18 @@
 #devloginbutton {
   margin-right: 10px;
-  float: right;
+}
+
+.navbar {
+  display: flex;
+  width: 100vw;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.nav-right {
+  display: flex;
 }
