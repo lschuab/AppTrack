@@ -4,7 +4,8 @@
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/errors.css">
+    <link rel="stylesheet" href="/assets/css/styleindex.css">
     <script defer type="text/javascript" src="/scripts/index.js"></script>
     <title></title>
   </head>
@@ -19,9 +20,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          <button class="btn btn-outline-warning" type="button" id="devloginbutton">Logout</button>
-          <br>
-
+            <button class="btn btn-outline-warning" type="button" id="devloginbutton">Logout</button>
         </div>
       </div>
     </nav>
@@ -32,7 +31,7 @@
     <div class="login-container col-6">
 
       <h1> Login </h1>
-        <form action="/login" method="post">
+        <form action="/developers/login" method="post">
           <div class="form-group">
             <label for="email-login">Email address</label>
             <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp" placeholder="Email Address" name="email" required>
@@ -47,13 +46,18 @@
       </div>
 
       <br>
+      <% for (const err of errors.login) { %>
+        <p class="warning"><%= err %></p>
+      <% } %>
+
+      <br>
       <hr>
       <br>
 
       <div class="register-container col-6">
 
         <h1> Register</h1>
-          <form id="register" action="/register" method="post">
+          <form id="register" action="/developers/register" method="post">
             <br>
             <div class="form-group">
               <label for="name-input">Full Name</label>
@@ -74,7 +78,7 @@
             <button type="submit" class="btn btn-primary">Register</button>
           </form>
       </div>
-
+      <br>
       <p id="mismatch" class="warning hidden">Passwords do not match</p>
         <% for (const err of errors.register) { %>
           <p class="warning"><%= err %></p>
