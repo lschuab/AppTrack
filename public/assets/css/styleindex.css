@@ -8,9 +8,17 @@
   height: 4em;
 }
 
+
+
 .logo {
   height: 130%;
   width: auto;
+}
+
+.logoa {
+  height: 100%;
+  width: auto;
+  margin-top: -12px;
 }
 
 .herologo {
