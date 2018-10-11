@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
     table.text('company_url');
     table.text('stack_pref');
     table.string('dev_type');
-    table.string('short_description');
+    table.text('short_description');
     table.text('full_description');
     table.integer('business_id')
       .notNullable()

@@ -29,7 +29,11 @@ module.exports = {
       if (project.business_id !== req.session.business_id) {
         res.redirect('/business');
       } else {
-        res.render('projectinfo', {project: project});
+        knex('businesses')
+          .where('id', req.session.business_id)
+        .then(results2 => {
+          res.render('projectinfo', {project: project, business: results2[0]});
+        })
       }
     });
   },
