@@ -49,6 +49,10 @@
           </div>
           <button type="submit" class="btn btn-primary">Login</button>
         </form>
+        <br>
+        <% for (const err of errors.login) { %>
+          <p class="warning"><%= err %></p>
+        <% } %>
 
       </div>
 

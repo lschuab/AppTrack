@@ -10,6 +10,8 @@
 
 .projects {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .add {
@@ -30,4 +32,8 @@
 .form-row {
   display: flex;
   justify-content: space-around;
+}
+
+.card {
+  margin:20px;
 }

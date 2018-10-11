@@ -41,10 +41,8 @@ module.exports = {
           res.redirect('/businesses/login');
           return;
         });
-      }
-      if (req.body.password === business.password) {
+      } else if (req.body.password === business.password) {
         req.session.business_id = business.id;
-        console.log(req.session.business_id);
         req.session.save(() => {
           res.redirect('/business');
         });

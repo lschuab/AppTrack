@@ -28,18 +28,23 @@
       <h1 class="header">Your Project Proposals</h1>
       <div class="projects">
         <% for (const project of projects) { %>
-          <div class="card" style="width: 18rem;">
+          <div class="card" style="width: 30rem;">
             <div class="card-body">
+              <h3><%= project.company_name %></h3>
               <p class="card-text"><%= project.short_description %></p>
-              <a href="#" class="btn btn-primary">See more</a>
+              <br>
+              <p class="card-text"><b>Project Type:</b> <%= project.dev_type %></p>
+              <p class="card-text"><b>Preferred Stack:</b> <%= project.stack_pref %></p>
+
+              <a href="/projects/<%= project.id %>/business" class="btn btn-primary center" style="margin: auto;">Details</a>
             </div>
           </div>
         <% } %>
 
-        <div class="card add" style="width: 18rem;">
+        <div class="card add" style="width: 30rem;">
           <div class="card-body center">
             <p class="card-text"></p>
-            <a href="/projects/new" class="btn btn-primary">ADD A PROJECT</a>
+            <a href="/projects/new" class="btn btn-primary" style="margin: auto;">ADD A PROJECT</a>
           </div>
         </div>
 
