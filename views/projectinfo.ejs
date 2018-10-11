@@ -29,8 +29,12 @@
    <h2>Project Details:</h2>
        <div class="project-description">
          <h2><%= project.full_description %></h2>
+         <h3><%= project.dev_type %></h3>
+         <h3><%= project.stack_pref %></h3>
          <p><b>Contact Info:</b></p>
-
+         <p> <%= business.contact_name %> </p>
+         <p> <%= business.phone_number %> </p>
+         <p> <%= business.email %> </p>
        </div>
        <button class="btn btn-outline-warning" type="button" id="devloginbutton" href="/business.ejs">Edit</button>
        <button class="btn btn-outline-warning" type="button" id="devloginbutton" href="/business.ejs">Delete</button>
