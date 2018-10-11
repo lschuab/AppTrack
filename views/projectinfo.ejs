@@ -32,8 +32,12 @@
          <p><b>Contact Info:</b></p>
 
        </div>
-       <button class="btn btn-outline-warning" type="button" id="devloginbutton" href="/business.ejs">Edit</button>
-       <button class="btn btn-outline-warning" type="button" id="devloginbutton" href="/business.ejs">Delete</button>
+        <a href="/projects/edit/<%= project.id %>">
+          <button class="btn btn-outline-warning" type="button" id="devloginbutton">Edit</button>
+        </a>
+        <a href="/projects/delete/<%= project.id %>">
+          <button class="btn btn-outline-warning" type="button" id="devloginbutton">Delete</button>
+        </a>
      </div>
 
    <!-- Footer -->
@@ -44,7 +48,6 @@
        © 2018 Copyright: Leandro, Surenity & Richard
      </div>
    </footer>
-
 
 </body>
 </html>
