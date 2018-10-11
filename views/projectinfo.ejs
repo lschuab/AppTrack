@@ -21,18 +21,33 @@
       </div>
     </div>
   </nav>
-    <div class="header">
+    <div class="header2">
      <h2><%= project.company_name %></h2>
-     <h6>Short Description:
+     <hr>
+     <h6><b>Short Description:</b>
        <br>
        <%= project.short_description %></h6>
    </div>
  </div>
  <div class="projectbod">
    <h2>Project Details:</h2>
+   <br>
        <div class="project-description">
-         <h4><%= project.full_description %></h4>
-         <p><b>Contact Info:</b></p>
+         <h6><%= project.full_description %></h6>
+         <br>
+         <hr>
+
+         <h5>Developer Type:</h5>
+           <h6><%= project.dev_type %></h6>
+           
+         <h5>Stack Preferred: </h5>
+         <h6><%= project.stack_pref %></h6>
+         <br>
+         <h5><b>Contact Info:</b></h5>
+         <p> <%= business.contact_name %> </p>
+         <p> <%= business.phone_number %> </p>
+         <p> <%= business.email %> </p>
+
 
          <a href="/projects/edit/<%= project.id %>">
            <button class="btn btn-warning" type="button" id="devloginbutton">Edit</button>
@@ -44,6 +59,9 @@
        </div>
 
      </div>
+
+
+    </div>
 
 
    <!-- Footer -->
