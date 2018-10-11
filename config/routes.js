@@ -37,6 +37,7 @@ module.exports = function(app){
   app.get('/developer', developers.browse);
   app.get('/projects/developer/:id', projects.viewDeveloper);
   app.get('/projects/accept/:id', projects.accept);
+  app.get('/projects/abandon/:id', projects.abandon);
 
 
 
