@@ -22,12 +22,11 @@
     </div>
   </nav>
     <div class="header">
-     <h2><%= projects.company_name %></h2>
-     <h3><%= projects.short_description %></h3>
+     <h2><%= project.company_name %></h2>
+     <h3><%= project.short_description %></h3>
    </div>
  </div>
    <h2>Project Details:</h2>
-   <% for(let i=0; i<projects.length; i++) { %>
        <div class="project-description">
          <h2><%= project.full_description %></h2>
          <p><b>Contact Info:</b></p>
@@ -36,7 +35,6 @@
        <button class="btn btn-outline-warning" type="button" id="devloginbutton" href="/business.ejs">Edit</button>
        <button class="btn btn-outline-warning" type="button" id="devloginbutton" href="/business.ejs">Delete</button>
      </div>
-
 
    <!-- Footer -->
    <footer class="page-footer">
