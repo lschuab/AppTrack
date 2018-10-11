@@ -32,10 +32,11 @@ module.exports = function(app){
   app.get('/projects/edit/:id', projects.editForm);
   app.post('/projects/edit/:id', projects.edit);
   app.get('/projects/delete/:id', projects.delete);
-  app.get('/projects/:id/business', projects.viewBusiness);
+  app.get('/projects/business/:id', projects.viewBusiness);
 
   app.get('/developer', developers.browse);
-  app.get('/projects/:id/developer', projects.viewDeveloper);
+  app.get('/projects/developer/:id', projects.viewDeveloper);
+  app.get('/projects/accept/:id', projects.accept);
 
 
 
