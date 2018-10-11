@@ -87,15 +87,26 @@
   width: auto;
 }
 
-.header {
+.header2 {
+  margin: 2em 12em 2em 12em;
   text-align: center;
   border: solid;
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 5px 10px 5px grey;
+  padding: 1.5em 6em 1.5em 6em;
+  background-color: #ECEBE9;
 }
 
 .projectbod {
-  text-align: center;
-  border: dashed;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  align-content: center;
+  text-align: left;
+  border: solid;
+  box-shadow: 10px 10px 5px grey;
+  padding: 1.5em 3em 3em 3em;
+  margin: .5em 10em 1em 10em;
+  background-color: #ECEBE9;
+}
+
+#devbackbutton {
+  margin-left: 1em;
+  margin-top: 1em;
 }
