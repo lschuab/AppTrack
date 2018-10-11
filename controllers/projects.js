@@ -33,7 +33,7 @@ module.exports = {
           .where('id', req.session.business_id)
         .then(results2 => {
           res.render('projectinfo', {project: project, business: results2[0]});
-        })
+        });
       }
     });
   },
@@ -82,7 +82,7 @@ module.exports = {
       .where('id', req.params.id)
       .del()
     .then(() => {
-      res.redirect('business');
+      res.redirect('/business');
     });
   }
 
