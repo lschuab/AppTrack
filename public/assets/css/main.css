@@ -68,9 +68,21 @@
   padding-top: 30px;
   padding-bottom: 30px;
   margin-top: -70px;
-  margin-bottom: 50px
+  margin-bottom: 50px;
+  border-color: #ee8b1d;
 }
 
 .card {
   margin:20px;
+}
+
+.navbar {
+  display: flex;
+  width: 100vw;
+  height: 4em;
+}
+
+.logo {
+  height: 130%;
+  width: auto;
 }

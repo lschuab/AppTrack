@@ -5,6 +5,17 @@
 .navbar {
   display: flex;
   width: 100vw;
+  height: 4em;
+}
+
+.logo {
+  height: 130%;
+  width: auto;
+}
+
+.herologo {
+  width: auto;
+  height: 18em;
 }
 
 .navbar-nav {
@@ -50,5 +61,3 @@ body, html {
       padding-top: 7.5rem;
       padding-bottom: 7.5rem;
     }
-
-    
