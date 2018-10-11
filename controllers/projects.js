@@ -30,7 +30,7 @@ module.exports = {
         res.redirect('/business');
       } else {
         knex('businesses')
-          .where('id', req.sessions.business_id)
+          .where('id', req.session.business_id)
         .then(results2 => {
           res.render('projectinfo', {project: project, business: results2[0]});
         })
