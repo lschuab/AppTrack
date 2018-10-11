@@ -9,7 +9,7 @@
   </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Capstone Knex</a>
+    <img class="logo"src="/assets/images/cclogo.png">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,18 +23,23 @@
   </nav>
     <div class="header">
      <h2><%= project.company_name %></h2>
-     <h3><%= project.short_description %></h3>
+     <h6>Short Description:
+       <br>
+       <%= project.short_description %></h6>
    </div>
  </div>
+ <div class="projectbod">
    <h2>Project Details:</h2>
        <div class="project-description">
-         <h2><%= project.full_description %></h2>
+         <h4><%= project.full_description %></h4>
          <p><b>Contact Info:</b></p>
 
+         <button class="btn btn-outline-warning" type="button" id="devloginbutton" href="/business.ejs">Edit</button>
+         <button class="btn btn-outline-warning" type="button" id="devloginbutton" href="/business.ejs">Delete</button>
+        </div>
        </div>
-       <button class="btn btn-outline-warning" type="button" id="devloginbutton" href="/business.ejs">Edit</button>
-       <button class="btn btn-outline-warning" type="button" id="devloginbutton" href="/business.ejs">Delete</button>
      </div>
+
 
    <!-- Footer -->
    <footer class="page-footer">

@@ -86,3 +86,16 @@
   height: 130%;
   width: auto;
 }
+
+.header {
+  text-align: center;
+  border: solid;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.projectbod {
+  text-align: center;
+  border: dashed;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
