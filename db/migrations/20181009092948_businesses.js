@@ -10,6 +10,8 @@ exports.up = function(knex, Promise) {
     table.string('email').unique();
     table.string('password');
     table.string('phone_number');
+    table.string('company_name');
+    table.text('company_url');
     table.timestamps(true, true);
   });
 };
