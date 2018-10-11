@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Business Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styleindex.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    <!-- Navigation-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Capstone Knex</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a href="/logout">
+            <button class="btn btn-outline-warning" type="button" id="devloginbutton">Logout</button>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+
+      <!-- New Project -->
+    <div class="container">
+
+      <h1 class="header"> Edit Project:</h1>
+
+      <form id="new-project" action="/projects/edit/<%= project.id %>" method="post">
+        <br>
+        <div class="form-complete">
+        <div class="form-row1">
+          <div class="form-group">
+            <label for="company-name-input">
+              Company Name</label>
+            <input type="text" class="form-control" id="company-name-input" placeholder="Company Name" name="company_name" value="<%=project.company_name%>" required>
+          </div>
+          <div class="form-group">
+            <label for="company-url-input">Company Website</label>
+            <input type="tel" class="form-control" id="company-url-input" placeholder="Company Website" name="company_url" value="<%=project.company_url%>">
+          </div>
+
+
+
+        </div>
+        <div class="form-row2">
+          <div class="form-group">
+            <label for="stack-pref-input">
+              What stack/ languages/ frameworks do you prefer for this project?</label>
+            <input type="text" class="form-control" id="dev-type-input" placeholder="Preferred Technologies" name="stack_pref" value="<%=project.stack_pref%>">
+          </div>
+        </div>
+        <div class="form-row6">
+          <div class="form-group">
+            <label for="dev-type-input">
+              Is this a data science or web development project?</label>
+              <br>
+            <select class="center" name="dev_type" id="dev-type-input" required>
+              <option value="<%= project.dev_type %>" selected><%= project.dev_type %></option>
+              <option value="Full Stack Web Developer">Full Stack Web Developer</option>
+              <option value="Data Scientist">Data Scientist</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row3">
+        <div class="form-group">
+          <label for="short-description">
+            Brief description of project</label>
+          <br>
+          <textarea id="short-description" name="short_description" rows="3" cols="80" ><%= project.short_description %></textarea>
+        </div>
+        </div>
+        <div class="form-row4">
+        <div class="form-group">
+          <label for="full-description">
+            Detailed project proposal</label>
+          <br>
+          <textarea id="full-description" name="full_description" rows="8" cols="80"><%= project.full_description %></textarea>
+        </div>
+      </div>
+
+      <div class="form-row5">
+        <button type="submit" class="btn btn-primary">Submit Project</button>
+    </div>
+  </div>
+      </form>
+
+
+    </div>
+  </body>
+</html>
