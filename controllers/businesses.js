@@ -16,9 +16,7 @@ module.exports = {
         email: req.body.email,
         password: req.body.password,
         contact_name: req.body.contact_name,
-        company_name: req.body.company_name,
         phone_number: req.body.phone_number,
-        company_url: req.body.company_url
         })
     .then(() => res.redirect('/businesses/login'))
     .catch(err => {
