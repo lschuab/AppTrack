@@ -102,6 +102,11 @@
   border: solid;
   box-shadow: 10px 10px 5px grey;
   padding: 1.5em 3em 3em 3em;
-  margin: 1em 10em 2em 10em;
+  margin: .5em 10em 1em 10em;
   background-color: #ECEBE9;
+}
+
+#devbackbutton {
+  margin-left: 1em;
+  margin-top: 1em;
 }
