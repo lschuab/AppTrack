@@ -62,7 +62,11 @@ module.exports = {
     knex('projects')
       .where('dev_id', null)
     .then(projects => {
-      res.render('browse', {projects : projects});
+      knex('projects')
+        .where('dev_id', req.session.developer_id)
+      .then(yourProjects => {
+        res.render('browse', {projects : projects, yourProjects: yourProjects});
+      });
     });
   }
 

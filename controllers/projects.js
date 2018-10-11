@@ -43,7 +43,11 @@ module.exports = {
       .where('id', req.params.id)
     .then((results) => {
       const project = results[0];
-      res.render('projectinfo_dev', {project: project});
+      knex('businesses')
+        .where('id', project.business_id)
+      .then(results2 => {
+        res.render('projectinfo_dev', {project: project, business: business});
+      });
     });
   },
 
@@ -83,6 +87,17 @@ module.exports = {
       .del()
     .then(() => {
       res.redirect('/business');
+    });
+  },
+
+  accept: (req, res) => {
+    knex('projects')
+      .where('id', req.params.id)
+      .update({
+        dev_id: req.session.developer_id
+      })
+    .then(() => {
+      res.redirect('developer');
     });
   }
 
