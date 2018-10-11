@@ -25,7 +25,7 @@
     </nav>
 
     <div class="container">
-      <h1 class="header">Your Project Proposals</h1>
+      <h1 class="header">Browse Projects</h1>
       <div class="projects">
         <% for (const project of projects) { %>
           <div class="card" style="width: 30rem;">
@@ -36,17 +36,11 @@
               <p class="card-text"><b>Project Type:</b> <%= project.dev_type %></p>
               <p class="card-text"><b>Preferred Stack:</b> <%= project.stack_pref %></p>
 
-              <a href="/projects/<%= project.id %>" class="btn btn-primary center" style="margin: auto;">Details</a>
+              <a href="/projects/<%= project.id %>" class="btn btn-warning center" style="margin: auto;">Details</a>
             </div>
           </div>
         <% } %>
 
-        <div class="card add" style="width: 30rem;">
-          <div class="card-body center">
-            <p class="card-text"></p>
-            <a href="/projects/new" class="btn btn-primary center" style="margin: auto;">ADD A PROJECT</a>
-          </div>
-        </div>
 
           <!-- <button type="submit"><a class="new project" href="/newproject">New Project</a></button> -->
 

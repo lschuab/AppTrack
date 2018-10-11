@@ -31,6 +31,8 @@ module.exports = function(app){
   app.post('/projects', projects.create);
   app.get('/projects/:id/business', projects.view);
 
+  app.get('/developer', developers.browse);
+
 
 
   //dummy routes for testing
