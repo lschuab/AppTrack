@@ -19,5 +19,19 @@ module.exports = {
     .then(() => {
       res.redirect('/business');
     });
+  },
+
+  view: (req, res) => {
+    knex('projects')
+      .where('id', req.params.id)
+    .then((results) => {
+      const project = results[0];
+      if (project.business_id !== req.session.business_id) {
+        res.redirect('/business');
+      } else {
+        res.render('projectinfo', {project: project});
+      }
+    });
   }
+
 };

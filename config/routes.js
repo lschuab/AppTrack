@@ -29,6 +29,9 @@ module.exports = function(app){
   app.get('/business', businesses.projects);
   app.get('/projects/new', projects.form);
   app.post('/projects', projects.create);
+  app.get('/projects/:id/business', projects.view);
+
+  app.get('/developer', developers.browse);
 
 
 
@@ -44,7 +47,7 @@ module.exports = function(app){
 };
 
 function authenticateUser(req, res, next) {
-  if (!req.session.user_id && !req.session.business_id) {
+  if (!req.session.developer_id && !req.session.business_id) {
     res.redirect('/');
   } else {
     next();

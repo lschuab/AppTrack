@@ -23,13 +23,17 @@
         </div>
       </div>
     </nav>
+
+
+      <!-- New Project -->
     <div class="container">
 
       <h1 class="header"> New Project:</h1>
 
       <form id="new-project" action="/projects" method="post">
         <br>
-        <div class="form-row">
+        <div class="form-complete">
+        <div class="form-row1">
           <div class="form-group">
             <label for="company-name-input">
               Company Name</label>
@@ -39,13 +43,18 @@
             <label for="company-url-input">Company Website</label>
             <input type="tel" class="form-control" id="company-url-input" placeholder="Company Website" name="company_url">
           </div>
+
+
+
         </div>
-        <div class="form-row">
+        <div class="form-row2">
           <div class="form-group">
             <label for="stack-pref-input">
               What stack/ languages/ frameworks do you prefer for this project?</label>
             <input type="text" class="form-control" id="dev-type-input" placeholder="Preferred Technologies" name="stack_pref">
           </div>
+        </div>
+        <div class="form-row6">
           <div class="form-group">
             <label for="dev-type-input">
               Is this a data science or web development project?</label>
@@ -57,21 +66,27 @@
             </select>
           </div>
         </div>
+        <div class="form-row3">
         <div class="form-group">
           <label for="short-description">
             Brief description of project</label>
           <br>
           <textarea id="short-description" name="short_description" rows="3" cols="80" ></textarea>
         </div>
+        </div>
+        <div class="form-row4">
         <div class="form-group">
           <label for="full-description">
             Detailed project proposal</label>
           <br>
           <textarea id="full-description" name="full_description" rows="8" cols="80"></textarea>
         </div>
+      </div>
 
-
+      <div class="form-row5">
         <button type="submit" class="btn btn-primary">Submit Project</button>
+    </div>
+  </div>
       </form>
 
 
