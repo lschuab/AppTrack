@@ -23,7 +23,9 @@ module.exports = {
 
   viewBusiness: (req, res) => {
     knex('projects')
-      .where('id', req.params.id)
+      .select('projects.*', 'developers.dev_name', 'developers.email')
+      .where('projects.id', req.params.id)
+      .leftJoin('developers', 'projects.dev_id', 'developers.id')
     .then((results) => {
       const project = results[0];
       if (project.business_id !== req.session.business_id) {

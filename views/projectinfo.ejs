@@ -53,6 +53,12 @@
          <p> <%= business.phone_number %> </p>
          <p> <%= business.email %> </p>
 
+        <h5><b>Developer working on this project:</b></h5>
+        <% if (!project.dev_id) { %>
+          <p>Not yet accepted</p>
+        <% } else { %>
+          <p><%= project.dev_name %> - <%= project.email %></p>
+        <% } %>
 
          <a href="/projects/edit/<%= project.id %>">
            <button class="btn btn-warning" type="button" id="devloginbutton">Edit</button>

@@ -35,6 +35,9 @@
               <br>
               <p class="card-text"><b>Project Type:</b> <%= project.dev_type %></p>
               <p class="card-text"><b>Preferred Stack:</b> <%= project.stack_pref %></p>
+              <% if (project.dev_id) { %>
+                <h4 style="color: green;">Accepted</h4>
+              <% } %>
               <a href="/projects/business/<%= project.id %>" class="btn btn-warning center" style="margin: auto;">Details</a>
             </div>
           </div>
