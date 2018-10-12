@@ -41,15 +41,6 @@ module.exports = function(app){
 
 
 
-  //dummy routes for testing
-  app.get('/newproject', (req, res) => res.render('new_project'));
-  app.get('/projectinfo', (req, res) => res.render('project_info'));
-
-
-
-
-
-
 };
 
 function authenticateUser(req, res, next) {
